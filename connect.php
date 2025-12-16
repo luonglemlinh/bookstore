@@ -1,11 +1,12 @@
 <?php
 
-if (isset ($ENV[''])){
-    $host=$ENV['tramway.proxy.rlwy.net'];
-    $user=$ENV['root'];
-    $pass=$ENV['uktMiTvrWuwlgoGamKvRmDObGKJKtsKY'];
-    $db=$ENV['railway'];
-    $port = $ENV['3306'];
+if (isset($_ENV['MYSQL_HOST'])) { 
+   
+    $host = $_ENV['MYSQL_HOST'];
+    $user = $_ENV['MYSQL_USER'];
+    $pass = $_ENV['MYSQL_PASSWORD'];
+    $db   = $_ENV['MYSQL_DATABASE'];
+    $port = $_ENV['MYSQL_PORT'];
     
     $ocon=new mysqli($host,$user,$pass, $db);
 } else {
