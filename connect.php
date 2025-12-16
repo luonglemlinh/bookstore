@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_ENV['MYSQL_HOST'])) { 
-   
+
     $host = $_ENV['MYSQL_HOST'];
     $user = $_ENV['MYSQL_USER'];
     $pass = $_ENV['MYSQL_PASSWORD'];
