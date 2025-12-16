@@ -1,0 +1,177 @@
+table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background: #16515fff;
+            color: #fff;
+        }
+        a.book-link {
+            color: #16515fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a.book-link:hover {
+            text-decoration: underline;
+        }
+        .book-filter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.book-filter-form input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.book-filter-form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.book-filter-form button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #16515fff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.book-filter-form button:hover {
+    background-color: #0f3b6dff;
+}
+
+.book-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.book-list th, .book-list td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.book-list th {
+    background-color: #16515fff;
+    color: #fff;
+}
+
+.book-link {
+    color: #16515fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.book-link:hover {
+    text-decoration: underline;
+}
+.book-actions {
+    margin-bottom: 15px;
+}
+
+.btn-create {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #16515fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-create:hover {
+    background-color: #458298ff;
+}
+/* Tiêu đề h2 */
+.book-management h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #16515fff; /* màu xanh đồng bộ với button và link */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #16515fff;
+    padding-bottom: 5px;
+}
+.pagination {
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+}
+
+.pagination a {
+    padding: 6px 12px;
+    background: #16515fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.pagination a:hover {
+    background: #458298ff;
+}
+
+.pagination a.active {
+    background: #0f3b59ff;
+}
+.btn-delete {
+    padding: 5px 10px;
+    background-color: #ff4d4f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.btn-delete:hover {
+    background-color: #d9363e;
+}
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.btn-edit, .btn-delete {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.btn-edit {
+    background-color: #16515f; /* màu xanh của CSS trước */
+}
+.btn-edit:hover {
+    background-color: #458298;
+}
+
+.btn-delete {
+    background-color: #ff4d4f; /* đỏ */
+}
+.btn-delete:hover {
+    background-color: #d9363e;
+}
+.book-list table th {
+    text-align: center;
+    padding: 10px;
+}
+

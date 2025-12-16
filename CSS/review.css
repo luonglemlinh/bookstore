@@ -1,0 +1,104 @@
+/* ====== CONTAINER ====== */
+.review_container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.review_container h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #4a746b;
+}
+
+/* ====== BOX SẢN PHẨM ====== */
+.review_item_box {
+    display: flex;
+    gap: 16px;
+    padding: 18px;
+    background: #f5fdfb;
+    border: 1px solid #d3eee4;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.review_img {
+    width: 110px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.review_info p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.review_title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0b4644;
+    margin-bottom: 8px;
+}
+
+/* ====== STAR RATING ====== */
+.star_rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 28px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.star_rating input {
+    display: none;
+}
+
+.star_rating label {
+    color: #ccc;
+    transition: 0.2s;
+}
+
+.star_rating input:checked ~ label {
+    color: #ffca2c;
+}
+
+.star_rating label:hover,
+.star_rating label:hover ~ label {
+    color: #ffca2c;
+}
+
+/* ====== COMMENT ====== */
+.review_textarea {
+    width: 100%;
+    height: 130px;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 15px;
+}
+
+/* ====== BUTTON ====== */
+.submit_review_btn {
+    margin-top: 18px;
+    width: 100%;
+    padding: 13px;
+    background: #087f5b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.submit_review_btn:hover {
+    background: #065e44;
+}

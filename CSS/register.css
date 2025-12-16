@@ -1,0 +1,122 @@
+/* ============================
+   REGISTER PAGE – STYLE MODERN
+   ============================ */
+
+/* Biến màu (giữ giống giao diện chính của bạn) */
+:root {
+    --primary-color: #4a746b;
+    --accent-color: #0b4644;
+    --orange: #F59E0B;
+    --white: #ffffff;
+    --text-color: #1F2937;
+    --light-text: #6b7280;
+    --border-radius: 12px;
+    --shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* Nền trang */
+body {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Khung form đăng ký */
+.register-box {
+    background: var(--white);
+    width: 420px;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.4s ease;
+}
+
+.register-box h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Input */
+.input-box {
+    margin-bottom: 1rem;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(73, 114, 140, 0.25);
+}
+
+/* Nút đăng ký */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Thông báo lỗi */
+.danger {
+    background: rgba(255, 71, 87, 0.15);
+    padding: 10px 14px;
+    border-left: 4px solid #ff4757;
+    margin-bottom: 1rem;
+    color: #b80000;
+    border-radius: 6px;
+}
+
+/* Link chuyển trang */
+.register-box p {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--light-text);
+}
+
+.register-box a {
+    color: var(--accent-color);
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.register-box a:hover {
+    color: var(--orange);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

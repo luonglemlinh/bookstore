@@ -1,0 +1,55 @@
+.account_wrapper {
+    width: 60%;
+    margin: 40px auto;
+    background: #e8f8e8;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #b7e4b7;
+}
+
+.account_wrapper h2 {
+    text-align: center;
+    color: #27ae60;
+    margin-bottom: 25px;
+}
+
+.account_form label {
+    font-weight: bold;
+}
+
+.account_form input,
+.account_form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.save_btn {
+    background: #27ae60;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.save_btn:hover {
+    background: #1e8f50;
+}
+.alert-success {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    background: #d4f8d3;
+    border: 1px solid #9cd79c;
+    color: #146c2e;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 8px;
+}

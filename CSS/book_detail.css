@@ -1,0 +1,130 @@
+.detail_container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.detail_left { flex: 1; }
+
+.detail_img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+}
+
+.detail_right { flex: 1; }
+
+.detail_title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.detail_price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.new_price {
+    font-size: 1.8rem;
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.old_price {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.quantity_box {
+    margin: 1rem 0;
+}
+
+.quantity_box input {
+    width: 70px;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.detail_btns {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.buy_now_btn {
+    flex: 1;
+    background: var(--orange);
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add_cart_btn {
+    flex: 1;
+    background: var(--primary-color);
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ====================== */
+
+.detail_section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+}
+
+.section_title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 0 15px;
+    color: var(--primary-color);
+}
+
+.info_block,
+.review_block {
+    background: #fff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.review_item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.review_item:last-child {
+    border-bottom: none;
+}
+
+.review_stars i.active {
+    color: #fbbf24;
+}
+.review_filter {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#filter_rating {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+

@@ -1,0 +1,225 @@
+/* ===========================
+   RESET + BASE
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #f2f7f6;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+.container {
+    width: 520px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 28px 32px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-size: 22px;
+    color: #2c5e57;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+h3 {
+    color: #2c5e57;
+    margin: 18px 0 14px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ===========================
+   NOTE BOX
+=========================== */
+.note {
+    background: #e6f7f3;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border-left: 4px solid #4a746b;
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #0b4644;
+    line-height: 1.45;
+}
+
+/* ===========================
+   PRODUCT LIST
+=========================== */
+.status-req_return {
+    background: #e0b100;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+}
+.return_products_list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.return_item_card {
+    display: flex;
+    gap: 16px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #d8e5e3;
+    transition: 0.25s;
+}
+
+.return_item_card:hover {
+    border-color: #4a746b;
+    box-shadow: 0 4px 12px rgba(11,70,68,0.10);
+}
+
+.return_item_image {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #c9d9d7;
+}
+
+.return_item_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.return_item_title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c5e57;
+}
+
+.return_item_qty {
+    font-size: 14px;
+    margin-top: 6px;
+    color: #4a746b;
+}
+
+/* ===========================
+   FORM INPUTS
+=========================== */
+label {
+    font-weight: 600;
+    margin-top: 18px;
+    display: block;
+    color: #2c5e57;
+    font-size: 15px;
+}
+
+select, textarea, input[type='file'] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 8px;
+
+    border-radius: 10px;
+    border: 1.7px solid #c4d5d3;
+    background: #fafafa;
+
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+select:focus,
+textarea:focus,
+input[type='file']:focus {
+    border-color: #4a746b;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74,116,107,0.25);
+}
+
+textarea {
+    height: 130px;
+    resize: none;
+}
+
+/* ===========================
+   FILE INPUT
+=========================== */
+input[type="file"] {
+    padding: 10px;
+    background: #ffffff;
+    cursor: pointer;
+
+    border: 2px dashed #c4d5d3;
+    color: #2c5e57;
+
+    transition: 0.25s;
+}
+
+input[type="file"]:hover {
+    border-color: #4a746b;
+}
+
+/* ===========================
+   SUBMIT BUTTON
+=========================== */
+button {
+    width: 100%;
+    padding: 14px 0;
+
+    background: linear-gradient(135deg, #4a746b, #0b4644);
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.25s;
+
+    box-shadow: 0 4px 12px rgba(11,70,68,0.25);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(11,70,68,0.35);
+    background: linear-gradient(135deg, #395e56, #0b4644);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+        padding: 22px;
+    }
+
+    .return_item_card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .return_item_image {
+        width: 120px;
+        height: 160px;
+    }
+}
+

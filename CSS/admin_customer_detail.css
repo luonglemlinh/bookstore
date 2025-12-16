@@ -1,0 +1,352 @@
+/* --- 1. Cấu trúc chung --- */
+body {
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.detail-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+    /* Nếu header của bạn là fixed, hãy thêm margin-top để không bị che */
+    /* margin-top: 80px; */ 
+}
+
+/* Nút Quay lại */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: all 0.2s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: transparent;
+}
+
+.btn-back:hover {
+    color: #16515fff;
+    background: #e6eff1;
+    transform: translateX(-3px);
+}
+
+/* Khung Card (Dùng chung cho cả Info và Order List) */
+.card-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #e1e3e6;
+}
+
+/* --- 2. Phần Thông tin Khách hàng (Header Profile) --- */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #eee;
+    margin-bottom: 30px;
+}
+
+.p-avatar {
+    width: 72px;
+    height: 72px;
+    background-color: #d1fae5;
+    color: #065f46;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.p-info h2 {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+    color: #111;
+    font-weight: 700;
+}
+
+.p-contact {
+    color: #666;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.p-contact span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.p-contact span i {
+    color: #9ca3af;
+}
+
+/* --- 3. Phần Thống kê (3 Cột) --- */
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.stat-col {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.stat-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+}
+
+.stat-link {
+    font-size: 18px;
+    color: #16515fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+.stat-link:hover {
+    text-decoration: underline;
+}
+
+.stat-sub {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-top: 5px;
+}
+
+/* --- 4. Danh sách Đơn hàng --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+}
+
+.link-all {
+    font-size: 13px;
+    color: #16515fff;
+    font-weight: 600;
+    text-decoration: none;
+    background: #e6eff1;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* Hàng đơn hàng (Order Row) */
+.order-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 15px;
+    border-bottom: 1px solid #f3f4f6;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+
+.order-row:last-child {
+    border-bottom: none;
+}
+
+.order-row:hover {
+    background-color: #f9fafb;
+    transform: translateX(5px); /* Hiệu ứng đẩy nhẹ sang phải */
+}
+
+/* Cột trái: ID và Meta */
+.o-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.o-id {
+    font-weight: 700;
+    color: #16515fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.o-meta {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* Cột phải: Giá và Badge */
+.o-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.o-price {
+    font-weight: 700;
+    font-size: 16px;
+    color: #111;
+}
+
+.badges-group {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+/* --- 5. Style cho Badges (Viên thuốc trạng thái) --- */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+/* Chấm tròn nhỏ trong badge */
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+/* Màu sắc từng trạng thái */
+.status-badge.success { background: #ecfdf5; color: #059669; border-color: #d1fae5; }
+.status-badge.warning { background: #fffbeb; color: #d97706; border-color: #fef3c7; }
+.status-badge.info    { background: #eff6ff; color: #2563eb; border-color: #dbeafe; }
+.status-badge.danger  { background: #fef2f2; color: #dc2626; border-color: #fee2e2; }
+
+/* --- 7. Sổ địa chỉ (Address Book) --- */
+.address-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Tự động chia cột */
+    gap: 20px;
+}
+
+.address-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    background: #fafafa;
+    transition: 0.2s;
+}
+
+.address-item:hover {
+    background: #fff;
+    border-color: #16515fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.addr-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.addr-name {
+    font-weight: 700;
+    color: #333;
+    font-size: 15px;
+}
+
+.addr-phone {
+    color: #666;
+    font-size: 14px;
+}
+
+.addr-info {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Badge Mặc định */
+.badge-default {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #16515fff;
+    background: #e0f2f1;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #b2dfdb;
+}
+/* --- 6. Responsive Mobile --- */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .p-contact {
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .stats-row {
+        flex-direction: column;
+        gap: 20px;
+        border-top: 1px dashed #eee;
+        padding-top: 20px;
+    }
+    
+    .stat-col {
+        border-bottom: 1px solid #f3f4f6;
+        padding-bottom: 15px;
+    }
+    .stat-col:last-child {
+        border-bottom: none;
+    }
+
+    /* Đơn hàng trên mobile: Xếp chồng */
+    .order-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .o-right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px dashed #eee;
+        padding-top: 10px;
+    }
+}

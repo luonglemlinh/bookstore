@@ -1,0 +1,181 @@
+/* --- Cấu trúc chung --- */
+body {
+    background-color: #f4f7f6; /* Màu nền nhẹ cho toàn trang */
+}
+
+.book-management {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* --- Header & Nút Quay lại --- */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #16515fff;
+}
+
+.book-management h2 {
+    color: #16515fff;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #e9ecef;
+    color: #16515fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: 1px solid #ced4da;
+}
+
+.btn-back:hover {
+    background-color: #dee2e6;
+    color: #0f3e4a;
+}
+
+/* --- Form Container --- */
+#edit-book-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    
+    /* Sử dụng Grid để chia cột giống mẫu bạn gửi */
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+}
+
+/* --- Các nhóm Input --- */
+.form-group {
+    margin-bottom: 5px;
+}
+
+/* Những thành phần cần tràn hết 2 cột (Tên, Mô tả, Form con, Ảnh, Nút) */
+.form-group:has(textarea),
+.form-group:has(input[name="title"]),
+.form-group:has(input[name="slug"]),
+.form-row, 
+.form-group:has(input[type="file"]),
+button[type="submit"] {
+    grid-column: 1 / -1; /* Tràn hết chiều ngang */
+}
+
+/* --- Label & Input Styling (Giống add_book.css) --- */
+#edit-book-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #16515fff;
+    font-size: 15px;
+}
+
+#edit-book-form input[type="text"],
+#edit-book-form input[type="number"],
+#edit-book-form input[type="file"],
+#edit-book-form select,
+#edit-book-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Quan trọng để không bị vỡ layout */
+}
+
+#edit-book-form input:focus,
+#edit-book-form select:focus,
+#edit-book-form textarea:focus {
+    border-color: #16515fff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(22, 81, 95, 0.1);
+}
+
+#edit-book-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* --- Style riêng cho dòng nhiều cột (Năm, Số trang, Trọng lượng) --- */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row > div {
+    flex: 1; /* Chia đều độ rộng */
+}
+
+/* --- Phần hiển thị ảnh --- */
+#edit-book-form img {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* --- Input file custom --- */
+input[type="file"] {
+    padding: 6px !important;
+    background-color: #f8f9fa !important;
+}
+
+/* --- Nút Submit --- */
+#edit-book-form .btn-submit {
+    margin-top: 15px;
+    padding: 14px 20px;
+    background-color: #16515fff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#edit-book-form .btn-submit:hover {
+    background-color: #458298ff;
+}
+
+#edit-book-form .btn-submit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+    #edit-book-form {
+        grid-template-columns: 1fr; /* Về 1 cột trên điện thoại */
+        padding: 20px;
+    }
+    
+    .form-row {
+        flex-direction: column; /* Các ô nhỏ cũng xếp dọc */
+        gap: 15px;
+    }
+}

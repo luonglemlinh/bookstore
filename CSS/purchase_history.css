@@ -1,0 +1,117 @@
+.purchase_container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.purchase_container h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--main-green);
+    text-align: center;
+    margin-bottom: 35px; 
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #e6f7f3, #ffffff);
+    box-shadow: 0 4px 12px rgba(42, 127, 111, 0.15);
+    letter-spacing: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ITEM */
+.purchase_item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.ph_img {
+    width: 80px;
+    height: 105px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.ph_info {
+    flex: 1;
+}
+
+.ph_title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.ph_date {
+    font-size: 14px;
+    color: #666;
+}
+
+.ph_price {
+    font-weight: 700;
+    color: #0b4644;
+    margin-top: 6px;
+}
+
+/* ACTION BUTTON AREA */
+.ph_actions {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end; 
+}
+
+/* BUTTON CHUNG */
+.repurchase_btn,
+.review_btn,
+.review_done_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    min-height: 38px;
+
+    background: #087f5b;      /* SAME COLOR */
+    color: #fff;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.05);
+    text-decoration: none;
+    white-space: nowrap;
+
+    box-sizing: border-box;
+    transition: background .2s ease, transform .12s ease;
+}
+
+/* HOVER */
+.repurchase_btn:hover,
+.review_btn:hover,
+.review_done_btn:hover {
+    background: #066649;
+    transform: translateY(-2px);
+}
+.success_message {
+    background: #d3f9d8;
+    color: #2b8a3e;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #b2e6b4;
+}

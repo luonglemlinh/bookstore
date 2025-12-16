@@ -1,0 +1,156 @@
+/* ===========================
+   Return List Page – Modern UI
+=========================== */
+
+body {
+    background: #eef3f2;
+    font-family: "Inter", sans-serif;
+}
+
+.return-container {
+    width: 760px;
+    margin: 40px auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b4644;
+    margin-bottom: 25px;
+}
+
+/* thông báo */
+.cancel_success {
+    text-align: center;
+    color: #1b7034;
+    background: #d9ffea;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* text khi không có đơn */
+.no_return_text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 17px;
+    color: #555;
+}
+
+/* ===========================
+   CARD ITEM
+=========================== */
+.return_card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+    border-left: 5px solid #4a746b;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.25s;
+}
+
+.return_card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* header */
+.return_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.order_code {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* ===========================
+   STATUS LABEL
+=========================== */
+.status {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pending {
+    background: #fff4c2;
+    color: #8c7200;
+}
+
+.approved {
+    background: #d7ffe2;
+    color: #1b7034;
+}
+
+.rejected {
+    background: #ffd6d6;
+    color: #b70000;
+}
+
+.cancelled {
+    background: #e6e6e6;
+    color: #555;
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+.thumb {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #cdd9d6;
+    margin-top: 12px;
+}
+
+/* ===========================
+   CANCEL BUTTON
+=========================== */
+
+.cancel_form {
+    margin-top: 15px;
+}
+
+.btn-cancel {
+   width: 100%;
+    padding: 14px 0;
+
+    background: linear-gradient(135deg, #4a746b, #0b4644);
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.25s;
+
+    box-shadow: 0 4px 12px rgba(11,70,68,0.25);
+}
+
+.btn-cancel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(11,70,68,0.35);
+    background: linear-gradient(135deg, #395e56, #0b4644);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 600px) {
+    .return-container { width: 92%; }
+    .btn-cancel { width: 100%; }
+}

@@ -1,0 +1,72 @@
+
+@import url('customer_stats.css'); /* Tận dụng lại CSS cơ bản từ file stats khách hàng */
+
+/* --- Tùy chỉnh Stats Grid cho Đơn hàng --- */
+.stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Có thể tăng lên 5 cột */
+}
+
+/* Các màu mới cho thẻ thống kê đơn hàng */
+.stat-card .icon-box.blue { background: #1e88e5; } /* Primary Blue - Tổng đơn */
+.stat-card .icon-box.green-alt { background: #43a047; } /* Completed Green */
+.stat-card .icon-box.red { background: #e53935; } /* Canceled Red */
+.stat-card .icon-box.purple { background: #8e24aa; } /* Shipping Purple */
+.stat-card .icon-box.orange { background: #fb8c00; } /* Revenue Orange */
+
+/* --- Tùy chỉnh Table Đơn hàng --- */
+.data-table th, .data-table td {
+    padding: 12px 10px;
+}
+
+.data-table th:nth-child(1) { width: 10%; } /* ID Đơn */
+.data-table th:nth-child(2) { width: 15%; } /* Ngày đặt */
+.data-table th:nth-child(3) { width: 25%; } /* Khách hàng */
+.data-table th:nth-child(4) { width: 15%; } /* Thanh toán */
+.data-table th:nth-child(5) { width: 15%; text-align: right; } /* Tổng tiền */
+.data-table th:nth-child(6) { width: 10%; text-align: center; } /* Trạng thái */
+.data-table th:nth-child(7) { width: 10%; text-align: center; } /* Chi tiết */
+
+.user-link {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+.user-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Badge Trạng thái Đơn hàng --- */
+.badge-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+    color: #fff; /* Mặc định chữ trắng */
+}
+
+.badge-status.badge-secondary { background-color: #6c757d; } /* pending */
+.badge-status.badge-info { background-color: #17a2b8; } /* confirmed */
+.badge-status.badge-primary { background-color: #007bff; } /* shipping */
+.badge-status.badge-success { background-color: #28a745; } /* completed, accept_return */
+.badge-status.badge-danger { background-color: #dc3545; } /* canceled, reject_return */
+.badge-status.badge-warning { background-color: #ffc107; color: #343a40; } /* req_cancel, req_return */
+.badge-status.badge-dark { background-color: #343a40; } /* reject_cancel */
+
+/* --- Tùy chỉnh Filter Bar --- */
+.filter-box .f-group {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.filter-box .status-select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 150px;
+}

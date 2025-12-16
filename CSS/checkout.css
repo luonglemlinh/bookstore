@@ -1,0 +1,206 @@
+/* =====================
+   CHECKOUT PAGE
+===================== */
+
+.checkout-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 25px;
+    padding: 0 10px;
+}
+
+/* BOX */
+.checkout-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.box-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* ADDRESS */
+.address-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .25s;
+    margin-bottom: 12px;
+}
+
+.address-card:hover {
+    border-color: #3b82f6;
+    background: #f3f9ff;
+}
+
+.address-card.selected {
+    border-color: #2563eb;
+    background: #e8f1ff;
+}
+
+.address-card input {
+    width: 18px;
+    height: 18px;
+    accent-color: #2563eb;
+}
+
+.address-info {
+    line-height: 1.4;
+}
+
+.addr-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.addr-detail {
+    font-size: 14px;
+    color: #555;
+}
+
+/* PAYMENT */
+.payment-option {
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: .25s;
+}
+
+.payment-option:hover {
+    border-color: #3b82f6;
+}
+
+.payment-option.selected {
+    border-color: #2563eb;
+    background: #e8f1ff;
+}
+
+/* PRODUCT LIST */
+.product-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.product-item img {
+    width: 75px;
+    height: 95px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* SUMMARY */
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.summary-total {
+    font-weight: 700;
+    color: #2563eb;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* BUTTON */
+.place-order-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #f97316;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 12px;
+    transition: .25s;
+}
+
+.place-order-btn:hover {
+    background: #ea580c;
+}
+.add-address-btn {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.add-address-btn:hover {
+    background: #1e4fc3;
+}
+
+.address-item {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.addr-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.addr-left {
+    display: flex;
+    gap: 10px;
+}
+
+.addr-name {
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.addr-detail {
+    font-size: 14px;
+    color: #555;
+}
+
+.addr-right {
+    display: flex;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.addr-action-link {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.addr-action-link:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    color: #aaa;
+}

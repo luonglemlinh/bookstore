@@ -1,0 +1,39 @@
+.trans-container {
+    width: 85%;
+    margin: 40px auto;
+}
+
+.trans-table {
+    width: 100%;
+    background: #fff;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.trans-table th {
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.trans-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.status.success {
+    color: green;
+    font-weight: bold;
+}
+
+.status.failed {
+    color: red;
+    font-weight: bold;
+}
+
+.status.pending {
+    color: orange;
+    font-weight: bold;
+}

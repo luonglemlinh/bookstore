@@ -1,0 +1,188 @@
+/* =============================
+   ORDER PAGE STYLE (Green Shopee-like)
+   ============================= */
+
+:root {
+    --main-green: #2a7f6f;
+    --green-dark: #17584b;
+    --green-light: #e2f3ef;
+    --text-main: #333;
+    --bg-light: #f8f9fa;
+}
+
+/* Container */
+.orders_container {
+    max-width: 1150px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.orders_container h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--main-green);
+    text-align: center;
+    margin-bottom: 35px;
+
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #e6f7f3, #ffffff);
+    box-shadow: 0 4px 12px rgba(42, 127, 111, 0.15);
+    letter-spacing: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.orders_container h2::before {
+    content: "🛍️";
+    font-size: 32px;
+}
+
+
+/* Tabs */
+.order_tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+    overflow-x: auto;
+}
+
+.order_tabs .tab {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: #ececec;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.25s ease;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.order_tabs .tab:hover {
+    background: var(--green-light);
+    color: var(--main-green);
+    transform: translateY(-2px);
+}
+
+.order_tabs .active {
+    background: var(--main-green);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(42, 127, 111, 0.35);
+}
+
+/* Order list */
+.order_list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.order_item {
+    padding: 22px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.order_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.order_item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--main-green);
+    background: var(--soft-green);
+    padding: 10px 16px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.order_item h3::before {
+    content: "📦";
+    font-size: 20px;
+}
+
+
+/* Status badges */
+.status {
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+
+.status.pending    { background: #fff4d4; color: #9e6a00; }
+.status.confirmed  { background: #dff0ff; color: #0a59a8; }
+.status.shipping   { background: #ffeccc; color: #d27c00; }
+.status.completed  { background: #dcffe4; color: #1d8a2f; }
+.status.canceled   { background: #ffd8d8; color: #c82323; }
+
+.status.pending::before { content: "⏳ "; }
+.status.confirmed::before { content: "✔️ "; }
+.status.shipping::before { content: "🚚 "; }
+.status.completed::before { content: "🎉 "; }
+.status.canceled::before { content: "❌ "; }
+
+
+/* Buttons */
+.order_detail_btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(45deg, var(--main-green), var(--green-dark));
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.25s ease;
+}
+
+.order_detail_btn:hover {
+    background: linear-gradient(45deg, var(--green-dark), var(--main-green));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(42, 127, 111, 0.35);
+}
+
+/* Empty state */
+.empty {
+    font-size: 17px;
+    text-align: center;
+    padding: 25px;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .order_item {
+        padding: 18px;
+    }
+    
+    .order_detail_btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .order_item h3 {
+        font-size: 16px;
+    }
+
+    .status {
+        font-size: 13px;
+    }
+}
